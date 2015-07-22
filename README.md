@@ -1,12 +1,14 @@
 # Orbit Issue
 ===================
 
-## worker issue
+## worker issue /orbit/issues/86
 
 see `/src/test/java/com/fiurgeist/orbit/workerissue`
 
-There you can find a unit test which doesn't make a lot of sense as it is because I streamlined it to focus on the issue.
+There you can find a unit test which doesn't make a lot of sense as it is, because I streamlined it to focus on the issue.
+
 It's basically just a for loop which calls a StatelessWorker a 100 times and in that actor another StatelessWorker is called.
+
 And every 10th or so run of the test I get this exception:
 
 ```
