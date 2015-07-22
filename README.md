@@ -3,11 +3,13 @@
 
 ## worker issue
 
-see /src/test/java/com/fiurgeist/orbit/workerissue
+see `/src/test/java/com/fiurgeist/orbit/workerissue`
+
 There you can find a unit test which doesn't make a lot of sense as it is because I streamlined it to focus on the issue.
 It's basically just a for loop which calls a StatelessWorker a 100 times and in that actor another StatelessWorker is called.
 And every 10th or so run of the test I get this exception:
-`
+
+```
 Jul 22, 2015 5:06:12 PM com.ea.orbit.concurrent.ExecutorUtils lambda$newScalingThreadPool$0
 Uncaught Exception
 java.lang.Error: Error loading class: null
@@ -30,4 +32,4 @@ Caused by: java.lang.NullPointerException
     at java.lang.Class.forName(Unknown Source)
     at com.ea.orbit.actors.runtime.Execution.classForName(Execution.java:770)
     ... 13 more
-`
+```
